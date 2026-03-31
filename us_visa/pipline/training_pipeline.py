@@ -6,7 +6,6 @@ from us_visa.components.data_validation import DataValidation
 from us_visa.components.data_transformation import DataTransformation
 from us_visa.components.model_trainer import ModelTrainer
 from us_visa.components.model_evaluation import ModelEvaluation
-from us_visa.components.model_pusher import ModelPusher
 
 
 from us_visa.entity.config_entity import (DataIngestionConfig,
@@ -127,18 +126,18 @@ class TrainPipeline:
         
 
     
-    def start_model_pusher(self, model_evaluation_artifact: ModelEvaluationArtifact) -> ModelPusherArtifact:
-        """
-        This method of TrainPipeline class is responsible for starting model pushing
-        """
-        try:
-            model_pusher = ModelPusher(model_evaluation_artifact=model_evaluation_artifact,
-                                       model_pusher_config=self.model_pusher_config
-                                       )
-            model_pusher_artifact = model_pusher.initiate_model_pusher()
-            return model_pusher_artifact
-        except Exception as e:
-            raise USvisaException(e, sys)
+    # def start_model_pusher(self, model_evaluation_artifact: ModelEvaluationArtifact) -> ModelPusherArtifact:
+    #     """
+    #     This method of TrainPipeline class is responsible for starting model pushing
+    #     """
+    #     try:
+    #         model_pusher = ModelPusher(model_evaluation_artifact=model_evaluation_artifact,
+    #                                    model_pusher_config=self.model_pusher_config
+    #                                    )
+    #         model_pusher_artifact = model_pusher.initiate_model_pusher()
+    #         return model_pusher_artifact
+    #     except Exception as e:
+    #         raise USvisaException(e, sys)
 
         
         

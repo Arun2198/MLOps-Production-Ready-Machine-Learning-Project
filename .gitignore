@@ -206,5 +206,8 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+<<<<<<< HEAD
 # Artifacts
+=======
+>>>>>>> 1d6bf8e5abfb78bb977cf8a91a5c96c8439157a9
 artifact/*

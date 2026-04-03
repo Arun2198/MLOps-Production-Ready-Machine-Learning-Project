@@ -126,18 +126,18 @@ class TrainPipeline:
         
 
     
-    # def start_model_pusher(self, model_evaluation_artifact: ModelEvaluationArtifact) -> ModelPusherArtifact:
-    #     """
-    #     This method of TrainPipeline class is responsible for starting model pushing
-    #     """
-    #     try:
-    #         model_pusher = ModelPusher(model_evaluation_artifact=model_evaluation_artifact,
-    #                                    model_pusher_config=self.model_pusher_config
-    #                                    )
-    #         model_pusher_artifact = model_pusher.initiate_model_pusher()
-    #         return model_pusher_artifact
-    #     except Exception as e:
-    #         raise USvisaException(e, sys)
+    def start_model_pusher(self, model_evaluation_artifact: ModelEvaluationArtifact) -> ModelPusherArtifact:
+        """
+        This method of TrainPipeline class is responsible for starting model pushing
+        """
+        try:
+            model_pusher = ModelPusher(model_evaluation_artifact=model_evaluation_artifact,
+                                       model_pusher_config=self.model_pusher_config
+                                       )
+            model_pusher_artifact = model_pusher.initiate_model_pusher()
+            return model_pusher_artifact
+        except Exception as e:
+            raise USvisaException(e, sys)
 
         
         

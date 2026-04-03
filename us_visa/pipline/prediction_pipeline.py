@@ -98,20 +98,20 @@ class USvisaClassifier:
             raise USvisaException(e, sys)
 
 
-    # def predict(self, dataframe) -> str:
-    #     """
-    #     This is the method of USvisaClassifier
-    #     Returns: Prediction in string format
-    #     """
-    #     try:
-    #         logging.info("Entered predict method of USvisaClassifier class")
-    #         model = USvisaEstimator(
-    #             bucket_name=self.prediction_pipeline_config.model_bucket_name,
-    #             model_path=self.prediction_pipeline_config.model_file_path,
-    #         )
-    #         result =  model.predict(dataframe)
+    def predict(self, dataframe) -> str:
+        """
+        This is the method of USvisaClassifier
+        Returns: Prediction in string format
+        """
+        try:
+            logging.info("Entered predict method of USvisaClassifier class")
+            model = USvisaEstimator(
+                bucket_name=self.prediction_pipeline_config.model_bucket_name,
+                model_path=self.prediction_pipeline_config.model_file_path,
+            )
+            result =  model.predict(dataframe)
             
-    #         return result
+            return result
         
-    #     except Exception as e:
-    #         raise USvisaException(e, sys)
+        except Exception as e:
+            raise USvisaException(e, sys)

@@ -1,6 +1,6 @@
 annotated-doc==0.0.4
 annotated-types==0.7.0
-anyio==4.13.0
+anyio==4.6.2
 appdirs==1.4.4
 asttokens==3.0.1
 boto3==1.42.79

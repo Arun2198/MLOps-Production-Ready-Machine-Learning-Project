@@ -121,8 +121,8 @@ export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
 
 # 7. Setup github secrets:
 
-   - AWS_ACCESS_KEY_ID
-   - AWS_SECRET_ACCESS_KEY
-   - AWS_DEFAULT_REGION
-   - ECR_REPO
-   - MONGODB_URL
+   - AWS_ACCESS_KEY_ID ---> Contains the AWS Access Key.
+   - AWS_SECRET_ACCESS_KEY ---> Contains the AWS Secret Access Key.
+   - AWS_DEFAULT_REGION ---> contains the region details e.g(us-east-1).
+   - ECR_REPO ---> Contains only the name of the repo e.g(visa) not the entire URI.
+   - MONGODB_URL ---> Contains the connection string to be used for connecting with the mongodb.
